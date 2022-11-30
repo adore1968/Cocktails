@@ -4,7 +4,7 @@ import Cocktails from "../components/Cocktails";
 
 function Home() {
   return (
-    <section>
+    <section className="px-5 sm:px-8">
       <Form />
       <Cocktails />
     </section>

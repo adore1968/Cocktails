@@ -65,36 +65,45 @@ function SingleCocktail() {
   }
 
   return (
-    <section>
-      <div>
-        <Link to="/">Back home</Link>
-        <h1>{cocktail.name}</h1>
+    <section className="px-4 sm:px-8">
+      <div className="text-center mb-14">
+        <Link
+          to="/"
+          className="bg-green-500 py-1 px-8 uppercase text-lg sm:text-xl mb-4 inline-block hover:bg-green-800 transition-colors"
+        >
+          Back home
+        </Link>
+        <h1 className="text-xl sm:text-2xl font-bold">{cocktail.name}</h1>
       </div>
-      <div>
-        <div>
-          <img src={cocktail.image} alt={cocktail.name} />
+      <div className="flex container sm:max-w-4xl mx-auto justify-evenly">
+        <div className="w-[40%]">
+          <img src={cocktail.image} alt={cocktail.name} className="rounded" />
         </div>
-        <div>
-          <div>
-            <p>Name:</p>
+        <div className="w-[50%]">
+          <div className="flex mb-5 text-lg sm:text-xl">
+            <p className="mr-2 bg-green-500 h-fit p-1 rounded">Name:</p>
             <span>{cocktail.name}</span>
           </div>
-          <div>
-            <p>Info:</p>
+          <div className="flex mb-5 text-lg sm:text-xl">
+            <p className="mr-2 bg-green-500 h-fit p-1 rounded">Info:</p>
             <span>{cocktail.alcoholic}</span>
           </div>
-          <div>
-            <p>Glass:</p>
+          <div className="flex mb-5 text-lg sm:text-xl">
+            <p className="mr-2 bg-green-500 h-fit p-1 rounded">Glass:</p>
             <span>{cocktail.glass}</span>
           </div>
-          <div>
-            <p>Instructions:</p>
+          <div className="flex mb-5 text-lg sm:text-xl">
+            <p className="mr-2 bg-green-500 h-fit p-1 rounded">Instructions:</p>
             <span>{cocktail.instructions}</span>
           </div>
-          <div>
-            <p>Ingredients:</p>
+          <div className="flex mb-5 text-lg sm:text-xl flex-wrap">
+            <p className="mr-2 bg-green-500 h-fit p-1 rounded">Ingredients:</p>
             {cocktail.ingredients.map((item, index) => {
-              return item ? <span key={index}>{item}</span> : null;
+              return item ? (
+                <span key={index} className="mr-2">
+                  {item}
+                </span>
+              ) : null;
             })}
           </div>
         </div>
