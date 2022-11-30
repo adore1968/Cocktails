@@ -1,7 +1,11 @@
 import React from "react";
 
 function Error() {
-  return <div>Error</div>;
+  return (
+    <section>
+      <h1>Error 404 - Page not found</h1>
+    </section>
+  );
 }
 
 export default Error;
