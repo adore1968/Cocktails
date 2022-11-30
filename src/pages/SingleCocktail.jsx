@@ -69,7 +69,7 @@ function SingleCocktail() {
       <div className="text-center mb-14">
         <Link
           to="/"
-          className="bg-green-500 py-1 px-8 uppercase text-lg sm:text-xl mb-4 inline-block hover:bg-green-800 transition-colors"
+          className="bg-green-500 py-1 px-8 uppercase text-lg sm:text-xl mb-4 inline-block hover:bg-green-800 transition-colors rounded"
         >
           Back home
         </Link>
